@@ -1,0 +1,61 @@
+name: 'Zero Downtime Deployment'
+description: 'Deploy project to server by ssh with zero downtime deployment.'
+
+inputs:
+  host:
+    description: 'Remote server host'
+    required: true
+  username:
+    description: 'Remote server username'
+    required: true
+  port:
+    description: 'Remote server port'
+    required: true
+  password:
+    description: 'Remote server password'
+    required: true
+  target:
+    description: 'Remote server target path'
+    required: true
+  sha:
+    description: 'Git commit sha need to deploy (github.sha)'
+    required: true
+  github_token:
+    description: 'Github token'
+    required: true
+  env_file:
+    description: 'Environment file content to sync with .env file'
+    required: false
+
+  run_script_before_check_folders:
+    description: 'Run script before checking folders'
+    required: false
+    default: 'false'
+  run_script_after_check_folders:
+    description: 'Run script after checking folders'
+    required: false
+    default: 'false'
+  run_script_before_download:
+    description: 'Run script before download release'
+    required: false
+    default: 'false'
+  run_script_after_download:
+    description: 'Run script after download release'
+    required: false
+    default: 'false'
+  run_script_before_activate:
+    description: 'Run script before activate release'
+    required: false
+    default: 'false'
+  run_script_after_activate:
+    description: 'Run script after activate release'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
+
+branding:
+  icon: "upload-cloud"
+  color: "black"
