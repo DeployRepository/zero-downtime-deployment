@@ -13,8 +13,8 @@ This GitHub Action helps you deploy your project to a remote server with zero do
 - **Environment File Sync**: Sync environment variables with the remote server.
 
 ## Example Usage
-
-Here's an example workflow configuration that uses the `DeployRepository/zero-downtime-deployment@v1.0.0` action:
+You can use our [Setuper](https://deployrepository.com/setuper) by filing this form well be do all work, create workflow and secrets.
+or you can follow an example workflow configuration that uses the `DeployRepository/zero-downtime-deployment@v1.0.0` action:
 
 > [!IMPORTANT]
 > You need to add the following secrets to your repository:
