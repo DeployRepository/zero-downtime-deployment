@@ -1,0 +1,28 @@
+{
+  "name": "laravel-deployer-src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeployRepository/laravel-deployer-src.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeployRepository/laravel-deployer-src/issues"
+  },
+  "homepage": "https://github.com/DeployRepository/laravel-deployer-src#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.0",
+    "axios": "^1.7.2",
+    "node-ssh": "^13.2.0"
+  }
+}
