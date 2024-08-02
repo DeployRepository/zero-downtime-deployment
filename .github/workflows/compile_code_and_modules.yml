@@ -1,0 +1,29 @@
+name: compile code and modules
+
+
+on:
+  push:
+    paths-ignore:
+      - 'dist/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: commit changes
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git add .
+        git commit -m "build: ${{ github.sha }}"
+        git push
