@@ -1,7 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const { NodeSSH } = require('node-ssh');
-// http request to our server to /check-github-sponsorship POST
 const axios = require('axios');
 
 const ssh = new NodeSSH();
@@ -28,7 +27,6 @@ async function run() {
         await console.log(`Target: ${target}`);
         await console.log(`SHA: ${sha}`);
 
-        // let githubRepoOwner = github.context.repository.full_name.split('/')[0];
         let githubRepoOwner = github.context.payload.repository.owner.login;
         await console.log('Checking if the user is a sponsor [' + githubRepoOwner + ']');
 
