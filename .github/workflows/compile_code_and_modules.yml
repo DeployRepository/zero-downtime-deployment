@@ -1,5 +1,7 @@
 name: compile code and modules
 
+permissions:
+  contents: write
 
 on:
   push:
