@@ -106,6 +106,8 @@ async function run() {
             await executeCommand(`ln -sfn ${target}/.env ${target}/releases/${sha}/.env`);
         }
 
+        await executeCommand(`rm -rf ${target}/releases/${sha}/storage`);
+
         await console.log("Linking the current release with storage");
         await executeCommand(`ln -sfn ${target}/storage ${target}/releases/${sha}/storage`);
 
