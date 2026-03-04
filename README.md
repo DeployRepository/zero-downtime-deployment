@@ -14,7 +14,7 @@ This GitHub Action helps you deploy your project to a remote server with zero do
 
 ## Example Usage
 You can use our [Setuper](https://deployrepository.com/setuper) by filing this form well be do all work, create workflow and secrets.
-or you can follow an example workflow configuration that uses the `DeployRepository/zero-downtime-deployment@v1.0.0` action:
+or you can follow an example workflow configuration that uses the `DeployRepository/zero-downtime-deployment@v1.1.0` action:
 
 > [!IMPORTANT]
 > You need to add the following secrets to your repository:
@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Deploy Laravel project
-        uses: DeployRepository/zero-downtime-deployment@v1.0.0
+        uses: DeployRepository/zero-downtime-deployment@v1.1.0
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
